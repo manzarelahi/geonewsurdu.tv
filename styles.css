@@ -1,0 +1,135 @@
+/* Base Styles */
+body {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  direction: rtl;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 30px;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  line-height: 0px;
+  margin-bottom: 30px;
+   color: #0056b3;
+}
+
+/* News Sections */
+.news-section {
+  margin-bottom: 50px;
+}
+
+.news-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  border-right: 5px solid #0056b3;
+  padding-right: 15px;
+}
+
+/* Grid Layout */
+.news-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* News Card */
+.news-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 1s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Headline */
+.news-card h3 {
+  font-size: 18px;
+  padding: 16px;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.news-card a {
+  text-decoration: none;
+  color: #111;
+  transition: color 0.3s;
+}
+
+.news-card a:hover {
+  color: #c00;
+}
+
+/* Highlight new updates background */
+.news-card.new-update {
+  background-color: #fff3f3;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.1);
+}
+
+/* Inline "تازہ خبر" badge before headline */
+.fresh-badge {
+  display: inline-block;
+  background-color: #e60023;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 2px 10px;
+  margin-left: 10px;
+  border-radius: 12px;
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  user-select: none;
+}
+
+/* Responsive Typography */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    
+  }
+
+  .news-section h2 {
+    font-size: 20px;
+  }
+
+  .news-card h3 {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+/* Geo News Header Branding */
+.geo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.geo-logo {
+  height: 80px;
+  width: auto;
+}
